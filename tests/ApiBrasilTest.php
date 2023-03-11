@@ -1,22 +1,24 @@
 <?php
 
-namespace ApiGratis\Test;
+namespace ApiBrasil\Test;
 
-use ApiGratis\ApiBrasil;
+use Service\WhatsApp;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {
+    
+    protected $client;
     protected function setUp(): void
     {
         parent::setUp();
-        $this->client = new ApiBrasil();
+        $this->client = new WhatsApp();
         
     }
 
     /** @test */
     public function it_should_be_a_client_instance()
     {
-        $this->assertInstanceOf(ApiBrasil::class, $this->client);
+        $this->assertInstanceOf(WhatsApp::class, $this->client);
     }
 }

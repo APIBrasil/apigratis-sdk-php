@@ -6,42 +6,28 @@ error_reporting(E_ALL);
 
 require_once('vendor/autoload.php');
 
-use ApiGratis\ApiBrasil;
+use ApiBrasil\Service;
 
 class Example
 {
 
-    // start new instance    
-    static function start()
+    //Send Text
+    static function sendText()
     {
-        return ApiBrasil::WhatsAppService("start", [
-            "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
-            "method" => "POST", //optional
-            "apitoken" => "YOUR_API_TOKEN", //required
-            "session" => "YOUR_SESSION_NAME", //required
-            "sessionkey" => "YOUR_SESSION_KEY", //required
-            "wh_status" => "", //optional
-            "wh_message" => "", //optional
-            "wh_connect" => "", //optional
-            "wh_qrcode" => "", //optional
-        ]);
-    }
+        return Service::WhatsApp("sendText", [
+            
+            "Bearer" => "SEU TOKEN AQUI",
+            "SecretKey" => "SEU SECRETKEY AQUI",
+            "PublicToken" => "SEU PUBLICTOKEN AQUI", 
+            "DeviceToken" => "SEU DEVICETOKEN AQUI",
 
-    // get qrcode    
-    static function qrcode()
-    {
-        return ApiBrasil::WhatsAppService("getQrCode", [
-            "serverhost" => "https://whatsapp2.contrateumdev.com.br", //required
-            "serverhost" => $server->host,
-            "sessionkey" => $session->session_key,
-            "session" => $session->session_name,
-            "method" => "GET",
-            "method" => "GET", //required
+            "body" => [
+                "number" => "5531994359434",
+                "text" => "🟢 https://apibrasil.com.br \n isso é um teste, caracteres especiais ? : !!! ççç  R$ 999,50"
+            ]
         ]);
-
     }
 
 }
 
-//$start = Example::start();
-//$qrcode = Example::qrcode();
+print_r(Example::sendText());
