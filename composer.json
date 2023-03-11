@@ -1,6 +1,6 @@
 {
-    "name": "jhowbhz/package-apigratis",
-    "description": "Uma forma simples de consumir serviços gratuitos oferecidos pelo site https://apigratis.com.br/",
+    "name": "jhowbhz/apigratis-sdk-php",
+    "description": "Uma forma simples de consumir serviços gratuitos oferecidos pelo site https://apibrasil.com.br/",
     "keywords": [
         "apigratis",
         "whatsapp",
@@ -10,12 +10,12 @@
         "messages free",
         "php requests"
     ],
-    "homepage": "https://apigratis.com.br",
+    "homepage": "https://apibrasil.com.br",
     "authors": [
         {
             "name": "Jhon",
-            "email": "contato@apigratis.com.br",
-            "homepage": "https://apigratis.com.br",
+            "email": "contato@apibrasil.com.br",
+            "homepage": "https://apibrasil.com.br",
             "role": "Developer"
         }
     ],
@@ -43,7 +43,7 @@
         }
     },
     "suggest": {
-        "ext-curl": "Required by ApiGratis\\ to requests in services.",
+        "ext-curl": "Required by ApiBrasil\\ to requests in services.",
         "guzzlehttp/guzzle": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients."
     },
     "config": {
