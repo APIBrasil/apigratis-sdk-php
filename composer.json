@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Service\\": "src/"
+            "ApiBrasil\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Service\\Test\\": "tests"
+            "ApiBrasil\\Test\\": "tests"
         }
     },
     "suggest": {
