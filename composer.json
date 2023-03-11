@@ -23,23 +23,20 @@
     "license": "MIT",
     "require": {
         "php": ">=8.0",
-        "composer/composer": "^2.5.4",
         "guzzlehttp/guzzle": "^7.5"
     },
     "require-dev": {
-        "php": ">=8.0",
         "phpunit/phpunit": "^9.6",
-        "guzzlehttp/guzzle": "^7.5",
         "orchestra/testbench": "^6.25"
     },
     "autoload": {
         "psr-4": {
-            "ApiGratis\\": "src/"
+            "Service\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiGratis\\Test\\": "tests"
+            "Service\\Test\\": "tests"
         }
     },
     "suggest": {
