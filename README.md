@@ -26,7 +26,7 @@ https://apigratis.com.br
 | ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 
 ## Install package with composer
-```composer require jhowbhz/package-apigratis```
+```composer require jhowbhz/apigratis-sdk-php```
 
 ## WhatsAppService - Examples usage
 
