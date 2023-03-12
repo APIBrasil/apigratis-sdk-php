@@ -6,16 +6,11 @@ use GuzzleHttp\Exception\ClientException;
 
 class Service extends Base
 {   
-
-    protected $base_uri;
-    public function _construct() {
-        self::$base_uri = "https://cluster.apigratis.com/api/v1/whatsapp/";
-    }
-
     public static function WhatsApp(String $action = '', Array $data = []) {
 
         try {
 
+            $base_uri = "https://cluster.apigratis.com/api/v1/whatsapp/";
             $method = $data['method'] ?? 'POST';
             
             $headers = [
@@ -31,7 +26,7 @@ class Service extends Base
 
             $body = $data['body'] ?? [];
 
-            $response = self::defaultRequest($method, self::$base_uri, $action, $headers, $body);
+            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
             return $response;
 
         } catch (ClientException $e) {
