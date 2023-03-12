@@ -9,9 +9,7 @@ class Service extends Base
 
     protected $base_uri;
     public function _construct() {
-
-        $this->base_uri = "https://cluster.apigratis.com/api/v1/whatsapp/";
-        
+        self::$base_uri = "https://cluster.apigratis.com/api/v1/whatsapp/";
     }
 
     public static function WhatsApp(String $action = '', Array $data = []) {
