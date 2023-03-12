@@ -1,7 +1,7 @@
-# SDK PHP - APIGratis <small> by APIBRASIL</small>  🚀
-Esse pacote é gratuito e pode utilizado para as funções do site API Brasil
+# SDK PHP - APIGratis <small> by API BRASIL</small>  🚀
+This package is free and can be used for API Brazil website functions
 
-## Get Free Token
+## Access Platform
 https://apigratis.com.br
 
 [![latest stable version](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
@@ -28,11 +28,8 @@ https://apigratis.com.br
 ## Install package with composer
 ```composer require jhowbhz/apigratis-sdk-php```
 
-## WhatsAppService - Examples usage
-
+## WhatsAppService
 - Como enviar mensagens de texto
-
-```sendText.php```
 
 ```php
 <?php
@@ -53,6 +50,4 @@ $response = Service::WhatsApp("sendText", [
 
 var_dump($response);
 die;
-
-?>
 ```
