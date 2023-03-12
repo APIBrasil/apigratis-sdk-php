@@ -26,7 +26,9 @@ https://apigratis.com.br
 | ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
 
 ## Install package with composer
-```composer require jhowbhz/apigratis-sdk-php```
+```bash
+composer require jhowbhz/apigratis-sdk-php
+```
 
 ## WhatsAppService
 - Como enviar mensagens de texto
