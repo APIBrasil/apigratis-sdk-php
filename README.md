@@ -5,11 +5,11 @@
 https://apigratis.com.br
 
 [![latest stable version](https://poser.pugx.org/APIBrasil/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/APIBrasil/apigratis-sdk-php)
-[![license mit](https://poser.pugx.org/APIBrasil/apigratis-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
-<a href="https://github.com/APIBrasil/apigratis-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/papigratis-sdk-php/total">
-<a href="https://github.com/APIBrasil/apigratis-sdk-php/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
-<a href="https://github.com/APIBrasil/apigratis-sdk-php/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
+[![license mit](https://poser.pugx.org/APIBrasil/apigratis-sdk-php/license.svg)](https://packagist.org/packages/APIBrasil/apigratis-sdk-php)
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/APIBrasil/apigratis-sdk-php"></a>
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/APIBrasil/apigratis-sdk-php/total">
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/APIBrasil/apigratis-sdk-php"></a>
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/APIBrasil/apigratis-sdk-php"></a>
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Our online channels
