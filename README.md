@@ -4,12 +4,12 @@
 ## Get Free Token
 https://apigratis.com.br
 
-[![latest stable version](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
-[![license mit](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
-<a href="https://github.com/jhowbhz/apigratis-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/package-apigratis/total">
-<a href="https://github.com/jhowbhz/package-apigratis/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
-<a href="https://github.com/jhowbhz/package-apigratis/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
+[![latest stable version](https://poser.pugx.org/APIBrasil/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/APIBrasil/apigratis-sdk-php)
+[![license mit](https://poser.pugx.org/APIBrasil/apigratis-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/package-apigratis)
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhowbhz/package-apigratis"></a>
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jhowbhz/papigratis-sdk-php/total">
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/jhowbhz/package-apigratis"></a>
+<a href="https://github.com/APIBrasil/apigratis-sdk-php/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhowbhz/package-apigratis"></a>
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Our online channels
