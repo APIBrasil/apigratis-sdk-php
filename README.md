@@ -41,10 +41,10 @@ require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
 $response = Service::WhatsApp("sendText", [
-    "Bearer" => "SEU TOKEN AQUI",
-    "SecretKey" => "SEU SECRETKEY AQUI",
-    "PublicToken" => "SEU PUBLICTOKEN AQUI", 
-    "DeviceToken" => "SEU DEVICETOKEN AQUI",
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "number" => "5531994359434",
         "text" => "🟢 Bem vindo ao APIBrasil"
