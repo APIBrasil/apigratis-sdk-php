@@ -1,5 +1,5 @@
 # SDK PHP - APIGratis <small> by APIBRASIL</small>  🚀
-### This version is not work under construction
+Esse pacote é gratuito e pode utilizado para as funções do site API Brasil
 
 ## Get Free Token
 https://apigratis.com.br
