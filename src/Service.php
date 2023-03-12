@@ -32,7 +32,7 @@ class Service extends Base
         } catch (ClientException $e) {
 
             $response = $e->getResponse();
-            return json_decode((string)($response->getBody()));
+            return json_decode((string)($response->getBody()->getContents()));
 
         }
 
