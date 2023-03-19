@@ -1,12 +1,14 @@
 {
     "name": "jhowbhz/apigratis-sdk-php",
-    "description": "Esse pacote ainda se encontra em desenvolvimento, aguarde uma versão estável",
+    "description": "This package is free and can be used for API Brazil website functions",
     "keywords": [
         "apigratis",
         "whatsapp",
         "messages",
         "api",
-        "myzap",
+        "brasil",
+        "correios",
+        "cep",
         "messages free",
         "php requests"
     ],
