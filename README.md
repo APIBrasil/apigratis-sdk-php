@@ -20,10 +20,10 @@ https://apigratis.com.br
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | Loading                | Loading                    |
-| ⌚ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   ✅   | Loading                   | Loading                   |
-| ⌚ | SinespService                  | API Plate get infos vehicle.       |   ✅   | Loading                   | Loading                   |
-| ⌚ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | Loading                   | Loading                   |
+| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | ✅                | ✅                    |
+| ✅ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   ✅   | ✅                   | ✅                   |
+| ✅ | VehiclesService                  | API Plate get infos vehicle.       |   ✅   | ✅                   | ✅                   |
+| ✅ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | ✅                   | ✅                   |
 
 ## Install package with composer
 ```bash
@@ -51,5 +51,92 @@ $response = Service::WhatsApp("sendText", [
 ]);
 
 var_dump($response);
+die;
+```
+## VehiclesService
+- Obtenha dados da placa de um veículo
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$dados = Service::Vehicles("dados", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "placa" => "HBM6603",
+    ]
+]);
+
+var_dump($dados);
+die;
+```
+- Obtenha dados da tabela fipe através da placade um veículo
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$fipe = Service::Vehicles("fipe", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "placa" => "HBM6603",
+    ]
+]);
+
+var_dump($fipe);
+die;
+```
+
+## CorreiosService
+- Obtenha dados de uma encomenda através do tracker
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$rastreio = Service::Correios("rastreio", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "code" => "NL249695552BR",
+    ]
+]);
+
+var_dump($rastreio);
+die;
+```
+- Obtenha dados de endereço através de um CEP
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$address = Service::Correios("address", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "query" => "32146057",
+    ]
+]);
+
+var_dump($address);
 die;
 ```
