@@ -21,6 +21,8 @@ https://apigratis.com.br
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
 | ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | ✅                | ✅                    |
+| ✅ | Receita Data CNPJ              | API CNPJ or data of Receita Federal BR.      |   ✅   | ✅                   | ✅                   |
+| ✅ | Receita Data CPF              | API CPF or data of SERASA Brazil.      |   ⌛   | ⌛                   | ⌛                   |
 | ✅ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   ✅   | ✅                   | ✅                   |
 | ✅ | VehiclesService                  | API Plate get infos vehicle.       |   ✅   | ✅                   | ✅                   |
 | ✅ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | ✅                   | ✅                   |
