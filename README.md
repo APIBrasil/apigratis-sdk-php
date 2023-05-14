@@ -155,16 +155,16 @@ die;
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$address = Service::CNPJ("address", [
+$cnpj = Service::CNPJ("cnpj", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "SecretKey" => "f87eb607-a8cc-43ea-b439...",
     "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
-        "query" => "32146057",
+        "cnpj" => "44.959.669/0001-80",
     ]
 ]);
 
-var_dump($address);
+var_dump($cnpj);
 die;
 ```
