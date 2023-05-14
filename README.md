@@ -16,6 +16,12 @@ This package is free and can be used for API Brazil website functions
 ## Access platform and credentials
 https://apigratis.com.br
 
+## Install or Download Package
+
+```composer require jhowbhz/apigratis-sdk-php```
+
+https://packagist.org/packages/jhowbhz/apigratis-sdk-php
+
 ## Status developing
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
