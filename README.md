@@ -83,6 +83,8 @@ $dados = Service::Vehicles("dados", [
 var_dump($dados);
 die;
 ```
+
+## VehiclesService
 - Obtenha dados da tabela fipe através da placade um veículo
 
 ```php
@@ -127,6 +129,8 @@ $rastreio = Service::Correios("rastreio", [
 var_dump($rastreio);
 die;
 ```
+
+## CorreiosService
 - Obtenha dados de endereço através de um CEP
 
 ```php
@@ -149,6 +153,7 @@ var_dump($address);
 die;
 ```
 
+## CNPJService
 - Obtenha dados de endereço através de um CNPJ de várias formas
 - Lista CNAES
 - CPNJ por CEP *
