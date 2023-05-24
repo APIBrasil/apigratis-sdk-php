@@ -3,7 +3,6 @@ Conjunto de API, para desenvolvedores.
 
 _Transforme seus projetos em soluções inteligentes com nossa API. Com recursos como  API do WhatsApp, geolocalização, rastreamento de encomendas, verificação de CPF/CNPJ e mais, você pode criar soluções eficientes e funcionais. Comece agora._
 
-
 [![latest stable version](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
 [![license mit](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
 <a href="https://github.com/APIBrasil/apigratis-sdk-php/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/APIBrasil/apigratis-sdk-php"></a>
@@ -12,20 +11,22 @@ _Transforme seus projetos em soluções inteligentes com nossa API. Com recursos
 <a href="https://github.com/jhowbhz/apigratis-sdk-php/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/APIBrasil/apigratis-sdk-php"></a>
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 
-## Online channels
+## Canais de suporte (Comunidade)
 [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/KsxrUGIPWvUBYAjI1ogaGs)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/apigratisoficial)
 
-## Access platform and credentials
+## Obtenha suas credenciais
 https://apigratis.com.br
 
-## Install or Download Package
+## Instalando pacote com o composer
+```bash
+composer require jhowbhz/apigratis-sdk-php
+```
 
-```composer require jhowbhz/apigratis-sdk-php```
-
+## Mais informações
 https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 
-## Status developing
+## Serviços de API disponíveis
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
@@ -36,11 +37,6 @@ https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 | ✅ | CEPLocation                    | API CEP Geolocation + IBGE Brazil.      |   ✅   | ✅                   | ✅                   |
 | ✅ | VehiclesService                | API Placa Dados.                        |   ✅   | ✅                   | ✅                   |
 | ✅ | FipeService                    | API Placa FIPE.                         |   ✅   | ✅                   | ✅                   |
-
-## Instalando pacote com o composer
-```bash
-composer require jhowbhz/apigratis-sdk-php
-```
 
 ## WhatsAppService
 - Como enviar mensagens de texto
