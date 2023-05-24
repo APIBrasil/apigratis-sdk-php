@@ -184,13 +184,18 @@ die;
 ## CEPLocation
 - Com essa API é possível obter dados de coordenadas LAT e LONG e código IBGE apenas com o CEP
 
+- Obtenha Lat e Long por CEP
+- Obtenha a lista de Cidades por UF
+- Obtenha a lista de Bairros por Cidade
+- Obtenha a lista de Estados
+
 ```php
 <?php
 
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$cnpj = Service::CEP("geolocation", [
+$cnpj = Service::CEP("cep", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "SecretKey" => "f87eb607-a8cc-43ea-b439...",
     "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
