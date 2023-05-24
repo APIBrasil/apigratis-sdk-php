@@ -1,5 +1,8 @@
 # SDK PHP - APIGratis <small> by API BRASIL</small>  🚀
-This package is free and can be used for API Brazil website functions
+Conjunto de API, para desenvolvedores.
+
+_Transforme seus projetos em soluções inteligentes com nossa API. Com recursos como  API do WhatsApp, geolocalização, rastreamento de encomendas, verificação de CPF/CNPJ e mais, você pode criar soluções eficientes e funcionais. Comece agora._
+
 
 [![latest stable version](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/v/stable.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
 [![license mit](https://poser.pugx.org/jhowbhz/apigratis-sdk-php/license.svg)](https://packagist.org/packages/jhowbhz/apigratis-sdk-php)
@@ -26,14 +29,15 @@ https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | Free in WhatsApp API.        |   ✅   | ✅                | ✅                    |
-| ✅ | Receita Data CNPJ              | API CNPJ or data of Receita Federal BR.      |   ✅   | ✅                   | ✅                   |
-| ✅ | Receita Data CPF              | API CPF or data of SERASA Brazil.      |   ⌛   | ⌛                   | ⌛                   |
-| ✅ | CorreiosService                | API CEP or Tracker packages, correios Brazil.      |   ✅   | ✅                   | ✅                   |
-| ✅ | VehiclesService                  | API Plate get infos vehicle.       |   ✅   | ✅                   | ✅                   |
-| ✅ | FipeService                    | FIPE value the velhicle plate.       |   ✅   | ✅                   | ✅                   |
+| ✅ | WhatsAppService                | API do WhatsApp Gratuita.               |   ✅   | ✅                   | ✅                   |
+| ✅ | Receita Data CNPJ              | API Dados CNPJ Receita.                 |   ✅   | ✅                   | ✅                   |
+| ✅ | Receita Data CPF               | API Dados de CPF Serasa.                |   ⌛   | ⌛                   | ⌛                   |
+| ✅ | CorreiosService                | API Busca encomendas Correios Brazil.   |   ✅   | ✅                   | ✅                   |
+| ✅ | CEPLocation                    | API CEP Geolocation + IBGE Brazil.      |   ✅   | ✅                   | ✅                   |
+| ✅ | VehiclesService                | API Placa Dados.                        |   ✅   | ✅                   | ✅                   |
+| ✅ | FipeService                    | API Placa FIPE.                         |   ✅   | ✅                   | ✅                   |
 
-## Install package with composer
+## Instalando pacote com o composer
 ```bash
 composer require jhowbhz/apigratis-sdk-php
 ```
@@ -152,7 +156,6 @@ $address = Service::Correios("address", [
 var_dump($address);
 die;
 ```
-
 ## CNPJService
 - Obtenha dados de endereço através de um CNPJ de várias formas
 - Lista CNAES
@@ -175,6 +178,29 @@ $cnpj = Service::CNPJ("cnpj", [
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "cnpj" => "44.959.669/0001-80",
+    ]
+]);
+
+var_dump($cnpj);
+die;
+```
+
+## CEPLocation
+- Com essa API é possível obter dados de coordenadas LAT e LONG e código IBGE apenas com o CEP
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$cnpj = Service::CEP("geolocation", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
+    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "cep" => "32146057",
     ]
 ]);
 
