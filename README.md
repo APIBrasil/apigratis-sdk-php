@@ -49,8 +49,6 @@ use ApiBrasil\Service;
 
 $response = Service::WhatsApp("sendText", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "number" => "5531994359434",
@@ -72,8 +70,6 @@ use ApiBrasil\Service;
 
 $dados = Service::Vehicles("dados", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "placa" => "HBM6603",
@@ -95,8 +91,6 @@ use ApiBrasil\Service;
 
 $fipe = Service::Vehicles("fipe", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "placa" => "HBM6603",
@@ -118,8 +112,6 @@ use ApiBrasil\Service;
 
 $rastreio = Service::Correios("rastreio", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "code" => "NL249695552BR",
@@ -141,8 +133,6 @@ use ApiBrasil\Service;
 
 $address = Service::Correios("address", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "query" => "32146057",
@@ -169,8 +159,6 @@ use ApiBrasil\Service;
 
 $cnpj = Service::CNPJ("cnpj", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "cnpj" => "44.959.669/0001-80",
@@ -197,8 +185,6 @@ use ApiBrasil\Service;
 
 $cnpj = Service::CEP("cep", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
-    "SecretKey" => "f87eb607-a8cc-43ea-b439...",
-    "PublicToken" => "3f279a5c-bfbc-11ed-afa1...", 
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
         "cep" => "32146057",

@@ -10,15 +10,13 @@ class Service extends Base
 
         try {
 
-            $base_uri = "https://cluster.apigratis.com/api/v1/whatsapp/";
+            $base_uri = "https://cluster.apigratis.com/api/v2/whatsapp/";
             $method = $data['method'] ?? 'POST';
             
             $headers = [
                 "Content-Type" => "application/json",
                 "Accept" => "application/json",
                 "Authorization" => "Bearer ".$data['Bearer'],
-                "SecretKey" => $data['SecretKey'] ?? '',
-                "PublicToken" => $data['PublicToken'] ?? '',
                 "DeviceToken" => $data['DeviceToken'] ?? '',
             ];
 
@@ -39,15 +37,13 @@ class Service extends Base
 
         try {
 
-            $base_uri = "https://cluster.apigratis.com/api/v1/vehicles/".$action;
+            $base_uri = "https://cluster.apigratis.com/api/v2/vehicles/".$action;
             $method = $data['method'] ?? 'POST';
             
             $headers = [
                 "Content-Type" => "application/json",
                 "Accept" => "application/json",
                 "Authorization" => "Bearer ".$data['Bearer'],
-                "SecretKey" => $data['SecretKey'] ?? '',
-                "PublicToken" => $data['PublicToken'] ?? '',
                 "DeviceToken" => $data['DeviceToken'] ?? '',
             ];
 
@@ -68,15 +64,13 @@ class Service extends Base
 
         try {
 
-            $base_uri = "https://cluster.apigratis.com/api/v1/correios/".$action;
+            $base_uri = "https://cluster.apigratis.com/api/v2/correios/".$action;
             $method = $data['method'] ?? 'POST';
             
             $headers = [
                 "Content-Type" => "application/json",
                 "Accept" => "application/json",
                 "Authorization" => "Bearer ".$data['Bearer'],
-                "SecretKey" => $data['SecretKey'] ?? '',
-                "PublicToken" => $data['PublicToken'] ?? '',
                 "DeviceToken" => $data['DeviceToken'] ?? '',
             ];
 
@@ -97,15 +91,13 @@ class Service extends Base
 
         try {
 
-            $base_uri = "https://cluster.apigratis.com/api/v1/dados/".$action;
+            $base_uri = "https://cluster.apigratis.com/api/v2/dados/".$action;
             $method = $data['method'] ?? 'POST';
             
             $headers = [
                 "Content-Type" => "application/json",
                 "Accept" => "application/json",
                 "Authorization" => "Bearer ".$data['Bearer'],
-                "SecretKey" => $data['SecretKey'] ?? '',
-                "PublicToken" => $data['PublicToken'] ?? '',
                 "DeviceToken" => $data['DeviceToken'] ?? '',
             ];
 
@@ -127,15 +119,13 @@ class Service extends Base
 
         try {
 
-            $base_uri = "https://cluster.apigratis.com/api/v1/cep/".$action;
+            $base_uri = "https://cluster.apigratis.com/api/v2/cep/".$action;
             $method = $data['method'] ?? 'POST';
             
             $headers = [
                 "Content-Type" => "application/json",
                 "Accept" => "application/json",
                 "Authorization" => "Bearer ".$data['Bearer'],
-                "SecretKey" => $data['SecretKey'] ?? '',
-                "PublicToken" => $data['PublicToken'] ?? '',
                 "DeviceToken" => $data['DeviceToken'] ?? '',
             ];
 
