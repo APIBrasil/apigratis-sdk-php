@@ -16,7 +16,7 @@ _Transforme seus projetos em soluções inteligentes com nossa API. Com recursos
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/apigratisoficial)
 
 ## Obtenha suas credenciais
-https://apigratis.com.br
+https://apibrasil.com.br
 
 ## Instalando pacote com o composer
 ```bash
