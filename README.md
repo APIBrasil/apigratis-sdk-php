@@ -139,6 +139,7 @@ use ApiBrasil\Service;
 
 $show = Service::Device("show", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "method" => "GET",
     "body" => [
         "search" => "82faab0a-24f4-4b8b-9926-455ea9b3cdb7",
     ]
