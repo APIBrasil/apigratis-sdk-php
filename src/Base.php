@@ -22,6 +22,9 @@ class Base
             $headers['Content-Type'] = 'application/json'; // set content type json
             $headers['Accept'] = 'application/json'; // set accept json
 
+            //headers
+            $headers['Agent'] = 'ApiBrasil/2.0.0 (https://www.apibrasil.io)'; // set user agent
+
             $request = new Request($method, $action, $headers, json_encode($body)); // create request
             $response = $client->send($request); // send request
 

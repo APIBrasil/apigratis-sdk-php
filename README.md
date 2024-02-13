@@ -1,5 +1,5 @@
-# SDK PHP - APIGratis <small> by API BRASIL</small>  🚀
-Conjunto de API, para desenvolvedores.
+# SDK PHP <small> by API BRASIL</small>  🚀
+### Conjunto de API, para desenvolvedores
 
 _Transforme seus projetos em soluções inteligentes com nossa API. Com recursos como  API do WhatsApp, geolocalização, rastreamento de encomendas, verificação de CPF/CNPJ e mais, você pode criar soluções eficientes e funcionais. Comece agora._
 
@@ -30,16 +30,40 @@ https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 
 | Up  | Services available            | Description       | Free    | Beta        | Stable   |
 ------|-------------------------------|-------------------|---------| ------------------------- | ------------------------- |
-| ✅ | WhatsAppService                | API do WhatsApp Gratuita.               |   ✅   | ✅                   | ✅                   |
-| ✅ | Receita Data CNPJ              | API Dados CNPJ Receita.                 |   ✅   | ✅                   | ✅                   |
-| ✅ | Receita Data CPF               | API Dados de CPF Serasa.                |   ⌛   | ⌛                   | ⌛                   |
-| ✅ | CorreiosService                | API Busca encomendas Correios Brazil.   |   ✅   | ✅                   | ✅                   |
-| ✅ | CEPLocation                    | API CEP Geolocation + IBGE Brazil.      |   ✅   | ✅                   | ✅                   |
-| ✅ | VehiclesService                | API Placa Dados.                        |   ✅   | ✅                   | ✅                   |
-| ✅ | FipeService                    | API Placa FIPE.                         |   ✅   | ✅                   | ✅                   |
+| ✅ | AuthService                    | API Login e Logout                      |   ✅   | ✅                   | ✅                   |
+| ✅ | ProfileService                 | API Dados do Usuario                    |   ✅   | ✅                   | ✅                   |
+| ✅ | ServerService                  | API Lista Servidores                    |   ✅   | ✅                   | ✅                   |
+| ✅ | DeviceService                  | API Criar, Editar Dispositivos          |   ✅   | ✅                   | ✅                   |
+| ✅ | WhatsAppService                | API WhatsApp                            |   ✅   | ✅                   | ✅                   |
+| ✅ | Receita Data CNPJ              | API Dados CNPJ Receita                  |   ✅   | ✅                   | ✅                   |
+| ✅ | Receita Data CPF               | API Dados de CPF Serasa                 |   ✅   | ✅                   | ✅                   |
+| ✅ | CorreiosService                | API Busca encomendas Correios Brazil    |   ✅   | ✅                   | ✅                   |
+| ✅ | CEPLocation                    | API CEP Geolocation + IBGE Brazil       |   ✅   | ✅                   | ✅                   |
+| ✅ | VehiclesService                | API Placa Dados                         |   ✅   | ✅                   | ✅                   |
+| ✅ | FipeService                    | API Placa FIPE                          |   ✅   | ✅                   | ✅                   |
 
-## WhatsAppService
-- Como enviar mensagens de texto
+## AuthService
+Com essa API você poderá obter o Bearer Token
+
+### Para fazer login válido por 1 ano
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$login = Service::Auth("login", [
+    "body" => [
+        "email" => "jhondoe@gmail.com",
+        "password" => "123456"
+    ]
+]);
+
+var_dump($login);
+die;
+```
+
+### Com essa API você poderá fazer logout, invalidando o Bearer Token
 
 ```php
 <?php
@@ -47,7 +71,147 @@ https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$response = Service::WhatsApp("sendText", [
+$logout = Service::Auth("logout", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+]);
+
+var_dump($logout);
+die;
+```
+
+## DeviceService
+Com essa API é possível criar, editar e deletar dispositivos
+
+### Para criar um dispositivo
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$store = Service::Device("store", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "SecretKey" => "f87eb607-a8cc-43ea-b439.....",
+    "body" => [
+        "type" => "cellphone",
+        "device_name" => "zap1",
+        "device_key" => "zapzap1",
+        "device_ip" => "198.29.10.50",
+        "server_search" => "341d6f36-b888....",
+        "webhook_wh_message" => "",
+        "webhook_wh_status" => ""
+    ]
+]);
+
+var_dump($store);
+die;
+```
+
+### Para atualizar um dispositivo
+
+```php
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$update = Service::Device("search", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "body" => [
+        "type" => "cellphone",
+        "search" => "82faab0a-24f4-4b8b-9926-455ea9b3cdb7",
+        "server_search" => "a2c85262-f830-4b90-a8da-ff67b7a7ed6e",
+        "device_name" => "zap2",
+        "device_key" => "zapzap1",
+        "device_ip" => "198.29.10.50",
+        "webhook_wh_message" => "",
+        "webhook_wh_status":""
+    ]
+]);
+
+var_dump($update);
+die;
+```
+
+### Para exibir um dispositivo
+```php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$show = Service::Device("show", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "body" => [
+        "search" => "82faab0a-24f4-4b8b-9926-455ea9b3cdb7",
+    ]
+]);
+
+var_dump($show);
+die;
+```
+
+## ServerService
+Com essa API é possível listar todos os servidores ativos
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$servers = Service::Server([
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "method" => "GET",
+]);
+
+var_dump($servers);
+die;
+```
+
+## ProfileService
+Com essa API é possível listar detalhes do seu perfil
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$profile = Service::Profile([
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "method" => "GET",
+]);
+
+var_dump($profile);
+die;
+```
+
+## PlanService
+Com essa API é possível listar detalhes do seu plano
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$plan = Service::Plan([
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "method" => "GET",
+]);
+
+var_dump($plan);
+die;
+```
+
+## WhatsAppService
+Com essa API é possível enviar mensagens de texto e outros
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$sendText = Service::WhatsApp("sendText", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
@@ -56,11 +220,12 @@ $response = Service::WhatsApp("sendText", [
     ]
 ]);
 
-var_dump($response);
+var_dump($sendText);
 die;
 ```
+
 ## VehiclesService
-- Obtenha dados da placa de um veículo
+Com essa API você obtem dados de caracteristicas de um veículo pela placa
 
 ```php
 <?php
@@ -81,7 +246,7 @@ die;
 ```
 
 ## VehiclesService
-- Obtenha dados da tabela fipe através da placade um veículo
+API para obter dados da Tabela Fipe através da placa
 
 ```php
 <?php
@@ -102,8 +267,9 @@ die;
 ```
 
 ## CorreiosService
-- Obtenha dados de uma encomenda através do tracker
+Com essa API você pode obter dados de encomendas dos correios
 
+### API para obter dados de encomendas através do rastreador
 ```php
 <?php
 
@@ -122,8 +288,7 @@ var_dump($rastreio);
 die;
 ```
 
-## CorreiosService
-- Obtenha dados de endereço através de um CEP
+### API para obter dados de endereço através de um CEP
 
 ```php
 <?php
@@ -141,9 +306,11 @@ $address = Service::Correios("address", [
 
 var_dump($address);
 die;
+
 ```
 ## CNPJService
-- Obtenha dados de endereço através de um CNPJ de várias formas
+Obtenha dados de endereço através de um CNPJ de várias formas
+
 - Lista CNAES
 - CPNJ por CEP *
 - CNPJ por Estado *
@@ -167,10 +334,11 @@ $cnpj = Service::CNPJ("cnpj", [
 
 var_dump($cnpj);
 die;
+
 ```
 
-## CEPLocation
-- Com essa API é possível obter dados de coordenadas LAT e LONG e código IBGE apenas com o CEP
+## CEPService
+Com essa API é possível obter dados de coordenadas LAT e LONG e código IBGE apenas com o CEP
 
 - Obtenha Lat e Long por CEP
 - Obtenha a lista de Cidades por UF
@@ -183,7 +351,7 @@ die;
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$cnpj = Service::CEP("cep", [
+$cep = Service::CEP("cep", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
@@ -191,6 +359,8 @@ $cnpj = Service::CEP("cep", [
     ]
 ]);
 
-var_dump($cnpj);
+var_dump($cep);
 die;
 ```
+##  Observação
+Você poderá obter mais endpoints na documentação de cada api, ou no link https://doc.apibrasil.io
