@@ -41,6 +41,8 @@ https://packagist.org/packages/jhowbhz/apigratis-sdk-php
 | ✅ | CEPLocation                    | API CEP Geolocation + IBGE Brazil       |   ✅   | ✅                   | ✅                   |
 | ✅ | VehiclesService                | API Placa Dados                         |   ✅   | ✅                   | ✅                   |
 | ✅ | FipeService                    | API Placa FIPE                          |   ✅   | ✅                   | ✅                   |
+| ✅ | DDD Anatel                     | API Obtem DDD                           |   ✅   | ✅                   | ✅                   |
+| ✅ | FeriadosBrasil                 | API Feriados Brasil                     |   ✅   | ✅                   | ✅                   |
 
 ## AuthService
 Com essa API você poderá obter o Bearer Token
@@ -245,6 +247,51 @@ $dados = Service::Vehicles("dados", [
 var_dump($dados);
 die;
 ```
+
+
+## DDDBrasil
+API para obter dados de todos os DDD's do Brasil, autorizados pela Anatel
+
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$ddd = Service::DDD("ddd", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "ddd" => "31",
+    ]
+]);
+
+var_dump($ddd);
+die;
+```
+
+## FeriadosBrasil
+API para obter dados de todos os Feriados nacionais, estadual, municipal e facultativos
+```php
+<?php
+
+require_once('vendor/autoload.php');
+use ApiBrasil\Service;
+
+$fipe = Service::HoliDays("feriados", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
+    "body" => [
+        "type" => "facultativo",
+        "date" => "07/09",
+        "year" => "2024"
+    ]
+]);
+
+var_dump($fipe);
+die;
+```
+
 
 ## VehiclesService
 API para obter dados da Tabela Fipe através da placa
