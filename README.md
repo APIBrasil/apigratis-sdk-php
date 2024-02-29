@@ -248,7 +248,6 @@ var_dump($dados);
 die;
 ```
 
-
 ## DDDBrasil
 API para obter dados de todos os DDD's do Brasil, autorizados pela Anatel
 
@@ -278,7 +277,7 @@ API para obter dados de todos os Feriados nacionais, estadual, municipal e facul
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$fipe = Service::HoliDays("feriados", [
+$feriados = Service::HoliDays("feriados", [
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "DeviceToken" => "d019580b-3c8c-40e3-b9a0....",
     "body" => [
@@ -288,11 +287,9 @@ $fipe = Service::HoliDays("feriados", [
     ]
 ]);
 
-var_dump($fipe);
+var_dump($feriados);
 die;
 ```
-
-
 ## VehiclesService
 API para obter dados da Tabela Fipe através da placa
 
