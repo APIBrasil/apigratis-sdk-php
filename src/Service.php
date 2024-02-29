@@ -275,4 +275,66 @@ class Service extends Base
 
     }
 
+    public static function HoliDays(String $action = '', Array $data = []) {
+
+        try {
+
+            $base_uri = "https://gateway.apibrasil.io/api/v2/holidays/".$action;
+            $method = $data['method'] ?? 'POST';
+            
+            $headers = [
+                "Content-Type" => "application/json",
+                "Accept" => "application/json",
+                "Authorization" => "Bearer ".$data['Bearer'],
+            ];
+            
+            if (isset($data['DeviceToken'])) {
+                $headers['DeviceToken'] = $data['DeviceToken'];
+            }
+
+            $body = $data['body'] ?? [];
+
+            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            return $response;
+
+        } catch (ClientException $e) {
+
+            $response = $e->getResponse();
+            return json_decode((string)($response->getBody()->getContents()));
+
+        }
+
+    }
+    
+    public static function DDD(String $action = '', Array $data = []) {
+
+        try {
+
+            $base_uri = "https://gateway.apibrasil.io/api/v2/ddd/".$action;
+            $method = $data['method'] ?? 'POST';
+            
+            $headers = [
+                "Content-Type" => "application/json",
+                "Accept" => "application/json",
+                "Authorization" => "Bearer ".$data['Bearer'],
+            ];
+            
+            if (isset($data['DeviceToken'])) {
+                $headers['DeviceToken'] = $data['DeviceToken'];
+            }
+
+            $body = $data['body'] ?? [];
+
+            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            return $response;
+
+        } catch (ClientException $e) {
+
+            $response = $e->getResponse();
+            return json_decode((string)($response->getBody()->getContents()));
+
+        }
+
+    }
+
 }
