@@ -66,9 +66,8 @@ class Service extends Base
 
             $base_uri = "https://gateway.apibrasil.io/api/v2/plans/";
             $method = $data['method'] ?? 'POST';
-            $me = $action == "me" ? true : false;
 
-            if($me){
+            if($action == "me"){
                 $base_uri = "https://gateway.apibrasil.io/api/v2/plan/";
             }
             
