@@ -60,6 +60,38 @@ class Service extends Base
 
     }
 
+    public static function Plan(String $action = '', Array $data = []) {
+
+        try {
+
+            $base_uri = "https://gateway.apibrasil.io/api/v2/plans/";
+            $method = $data['method'] ?? 'POST';
+            $me = $action == "me" ? true : false;
+
+            if($me){
+                $base_uri = "https://gateway.apibrasil.io/api/v2/plan/";
+            }
+            
+            $headers = [
+                "Content-Type" => "application/json",
+                "Accept" => "application/json",
+                "Authorization" => "Bearer ".$data['Bearer'],
+            ];
+
+            $body = $data['body'] ?? [];
+
+            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            return $response;
+
+        } catch (ClientException $e) {
+
+            $response = $e->getResponse();
+            return json_decode((string)($response->getBody()->getContents()));
+
+        }
+
+    }
+    
     public static function Profile(String $action = '', Array $data = []) {
 
         try {
