@@ -196,10 +196,13 @@ Com essa API é possível listar detalhes do seu plano
 require_once('vendor/autoload.php');
 use ApiBrasil\Service;
 
-$plan = Service::Plan([
+$plans = Service::Plan([
     "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
     "method" => "GET",
 ]);
+
+var_dump($plans);
+die;
 
 // ou obter o plano do usuario
 $plan = Service::Plan("me", [
