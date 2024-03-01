@@ -201,6 +201,12 @@ $plan = Service::Plan([
     "method" => "GET",
 ]);
 
+// ou obter o plano do usuario
+$plan = Service::Plan("me", [
+    "Bearer" => "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.....",
+    "method" => "GET",
+]);
+
 var_dump($plan);
 die;
 ```
