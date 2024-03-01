@@ -7,7 +7,7 @@ use GuzzleHttp\Exception\ClientException;
 class Service extends Base
 {
 
-    public static function Server(String $action = '', Array $data = []) {
+    public static function Server(Array $data = []) {
 
         try {
 
@@ -22,7 +22,7 @@ class Service extends Base
 
             $body = $data['body'] ?? [];
 
-            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            $response = self::defaultRequest($method, $base_uri, "", $headers, $body);
             return $response;
 
         } catch (ClientException $e) {
@@ -34,7 +34,7 @@ class Service extends Base
 
     }
 
-    public static function Auth(String $action = '', Array $data = []) {
+    public static function Auth(Array $data = []) {
 
         try {
 
@@ -48,7 +48,7 @@ class Service extends Base
 
             $body = $data['body'] ?? [];
 
-            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            $response = self::defaultRequest($method, $base_uri, "", $headers, $body);
             return $response;
 
         } catch (ClientException $e) {
@@ -79,7 +79,7 @@ class Service extends Base
 
             $body = $data['body'] ?? [];
 
-            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            $response = self::defaultRequest($method, $base_uri, "", $headers, $body);
             return $response;
 
         } catch (ClientException $e) {
@@ -91,7 +91,7 @@ class Service extends Base
 
     }
     
-    public static function Profile(String $action = '', Array $data = []) {
+    public static function Profile(Array $data = []) {
 
         try {
 
@@ -106,7 +106,7 @@ class Service extends Base
 
             $body = $data['body'] ?? [];
 
-            $response = self::defaultRequest($method, $base_uri, $action, $headers, $body);
+            $response = self::defaultRequest($method, $base_uri, "", $headers, $body);
             return $response;
 
         } catch (ClientException $e) {
