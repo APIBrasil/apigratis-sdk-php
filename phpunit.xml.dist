@@ -4,10 +4,17 @@
     <include>
       <directory suffix=".php">src/</directory>
     </include>
+    <exclude>
+      <directory suffix=".php">src/Generated/</directory>
+    </exclude>
   </coverage>
   <testsuites>
     <testsuite name="unit">
       <directory>tests</directory>
+      <exclude>tests/Contract</exclude>
+    </testsuite>
+    <testsuite name="contract">
+      <directory>tests/Contract</directory>
     </testsuite>
   </testsuites>
   <php>
