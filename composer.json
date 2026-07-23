@@ -1,14 +1,25 @@
 {
     "name": "jhowbhz/apigratis-sdk-php",
-    "description": "This package is free and can be used for API Brazil website functions",
+    "description": "SDK oficial PHP da plataforma APIBrasil - WhatsApp, SMS, consultas CPF/CNPJ, veiculos, CEP, correios, pagamentos e mais",
     "keywords": [
         "apigratis",
+        "apibrasil",
         "whatsapp",
         "messages",
         "api",
+        "api-rest",
         "brasil",
         "correios",
         "cep",
+        "cpf",
+        "cnpj",
+        "sms",
+        "pix",
+        "boleto",
+        "fipe",
+        "placa",
+        "serasa",
+        "geolocation",
         "messages free",
         "php requests"
     ],
@@ -41,6 +52,11 @@
             "ApiBrasil\\Test\\": "tests"
         }
     },
+    "support": {
+        "issues": "https://github.com/APIBrasil/apigratis-sdk-php/issues",
+        "docs": "https://doc.apibrasil.io",
+        "source": "https://github.com/APIBrasil/apigratis-sdk-php"
+    },
     "suggest": {
         "ext-curl": "Required by ApiBrasil\\ to requests in services.",
         "guzzlehttp/guzzle": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients."
@@ -51,7 +67,14 @@
         "preferred-install": "dist"
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit --testsuite unit",
+        "test:contract": "phpunit --testsuite contract",
+        "codegen": "php scripts/codegen.php"
+    },
+    "scripts-descriptions": {
+        "test": "Roda a suite de testes unitarios (transporte fake, sem rede).",
+        "test:contract": "Roda os testes de contrato contra o gateway real (APIBRASIL_CONTRACT=1).",
+        "codegen": "Regenera src/Generated/Catalog.php a partir do catalogo do gateway."
     },
     "minimum-stability": "dev",
     "prefer-stable": false
